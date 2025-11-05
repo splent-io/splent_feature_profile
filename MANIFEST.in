@@ -1,0 +1,1 @@
+recursive-include src/splent_feature_profile/assets/dist *.js *.css *.map
