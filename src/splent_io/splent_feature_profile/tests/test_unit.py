@@ -1,8 +1,8 @@
 import pytest
 
 from splent_framework.db import db
-from splent_feature_auth.models import User
-from splent_feature_profile.models import UserProfile
+from splent_io.splent_feature_auth.models import User
+from splent_io.splent_feature_profile.models import UserProfile
 from splent_framework.helpers.test_helpers_auth import login, logout
 
 

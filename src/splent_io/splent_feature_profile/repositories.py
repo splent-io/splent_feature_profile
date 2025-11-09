@@ -1,4 +1,4 @@
-from splent_feature_profile.models import UserProfile
+from splent_io.splent_feature_profile.models import UserProfile
 from splent_framework.repositories.BaseRepository import BaseRepository
 
 

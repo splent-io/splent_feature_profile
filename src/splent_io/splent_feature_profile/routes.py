@@ -1,10 +1,10 @@
 from flask import render_template, redirect, url_for, request
 from flask_login import login_required
 
-from splent_feature_profile import profile_bp
-from splent_feature_auth.services import AuthenticationService
-from splent_feature_profile.forms import UserProfileForm
-from splent_feature_profile.services import UserProfileService
+from splent_io.splent_feature_profile import profile_bp
+from splent_io.splent_feature_auth.services import AuthenticationService
+from splent_io.splent_feature_profile.forms import UserProfileForm
+from splent_io.splent_feature_profile.services import UserProfileService
 
 
 @profile_bp.route("/profile/edit", methods=["GET", "POST"])
