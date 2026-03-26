@@ -9,3 +9,6 @@ def init_feature(app):
 
 def inject_context_vars(app):
     return {}
+
+# Register signal handlers (auto-create profile on user registration)
+from splent_io.splent_feature_profile import signals  # noqa: F401
