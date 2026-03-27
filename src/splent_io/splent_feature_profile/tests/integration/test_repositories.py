@@ -4,6 +4,7 @@ Integration tests for UserProfile repository.
 These tests run against a real test database to verify queries,
 relationships and constraints work as expected.
 """
+
 from splent_framework.db import db
 from splent_io.splent_feature_auth.models import User
 from splent_io.splent_feature_profile.models import UserProfile

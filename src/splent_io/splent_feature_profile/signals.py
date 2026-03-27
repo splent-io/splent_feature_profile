@@ -4,6 +4,7 @@ Signal handlers for the profile feature.
 Connects to auth's user_registered signal to auto-create a UserProfile
 when a new user signs up.
 """
+
 from splent_io.splent_feature_auth.services import user_registered
 from splent_io.splent_feature_profile.models import UserProfile
 from splent_framework.db import db

@@ -3,6 +3,7 @@ Unit tests for UserProfileService.
 
 These tests mock the repository so they run without a database.
 """
+
 from unittest.mock import MagicMock
 from splent_io.splent_feature_profile.services import UserProfileService
 
