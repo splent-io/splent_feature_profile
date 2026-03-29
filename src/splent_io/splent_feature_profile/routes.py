@@ -1,5 +1,6 @@
 from flask import render_template, redirect, url_for, request
-from flask_login import login_required, current_user
+from flask_login import current_user
+from splent_io.splent_feature_auth.decorators import login_required
 
 from splent_io.splent_feature_profile import profile_bp
 from splent_io.splent_feature_profile.forms import UserProfileForm
