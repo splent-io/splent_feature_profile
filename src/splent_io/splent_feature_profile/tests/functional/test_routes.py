@@ -8,12 +8,10 @@ from splent_framework.helpers.test_helpers_auth import login, logout
 
 @pytest.fixture(scope="function")
 def test_client(test_client):
-    """
-    Extends the test_client fixture to add additional specific data for module testing.
-    for module testing (por example, new users)
-    """
+    """Seed a user with profile for this test file."""
     with test_client.application.app_context():
-        user_test = User(email="user@example.com", password="test1234")
+        user_test = User(email="user@example.com", active=True)
+        user_test.set_password("test1234")
         db.session.add(user_test)
         db.session.commit()
 
