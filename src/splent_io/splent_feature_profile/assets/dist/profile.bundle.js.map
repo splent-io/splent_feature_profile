@@ -1,0 +1,1 @@
+{"version":3,"file":"profile.bundle.js","mappings":";;;;AAAA","sources":["webpack://my_first_app/../splent_feature_profile/src/splent_io/splent_feature_profile/assets/js/scripts.js"],"sourcesContent":["console.log(\"Hi, I am a script loaded from profile module\");\n"],"names":[],"sourceRoot":""}
