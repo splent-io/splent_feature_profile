@@ -45,6 +45,7 @@ docker     = []
 [tool.splent.contract.requires]
 features = ["auth"]
 env_vars = []
+signals  = ["user-registered"]
 
 [tool.splent.contract.extensible]
 services  = ["UserProfileService"]
