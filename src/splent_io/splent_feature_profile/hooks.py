@@ -16,8 +16,13 @@ register_template_hook("layout.navbar.authenticated", navbar_user_name)
 
 # ── Script hooks ─────────────────────────────────────────────────────────────
 
+
 def profile_scripts():
-    return '<script src="' + url_for('profile.assets', subfolder='dist', filename='profile.bundle.js') + '"></script>'
+    return (
+        '<script src="'
+        + url_for("profile.assets", subfolder="dist", filename="profile.bundle.js")
+        + '"></script>'
+    )
 
 
 register_template_hook("layout.scripts", profile_scripts)
