@@ -4,8 +4,6 @@ from splent_framework.seeders.BaseSeeder import BaseSeeder
 
 
 class ProfileSeeder(BaseSeeder):
-    priority = 2  # After AuthSeeder (priority 1)
-
     def run(self):
         users = User.query.all()
         names = [("John", "Doe"), ("Jane", "Doe")]
