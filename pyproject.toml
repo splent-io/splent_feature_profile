@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_profile"
-version = "1.5.4"
+version = "1.5.5"
 requires-python = ">=3.13"
 authors = [{ name = "DiversoLab", email = "diversolab@us.es" }]
 dependencies = [
@@ -26,7 +26,7 @@ description = "User profile feature: view and edit authenticated user profile"
 
 [tool.splent.contract.provides]
 routes     = ["/profile/edit"]
-blueprints = ["profile_bp"]
+blueprints = []
 models     = ["UserProfile"]
 commands   = []
 hooks      = ["layout.navbar.authenticated", "layout.scripts", "layout.sidebar.authenticated.items"]
@@ -42,7 +42,7 @@ signals  = ["user-registered"]
 
 [tool.splent.contract.extensible]
 services  = ["UserProfileService"]
-templates = ["profile/edit.html"]
+templates = ["hooks/navbar_user_name.html", "hooks/sidebar_edit_profile.html", "profile/edit.html"]
 models    = ["UserProfile"]
-hooks     = []
-routes    = true
+hooks     = ["layout.navbar.authenticated", "layout.scripts", "layout.sidebar.authenticated.items"]
+routes    = false

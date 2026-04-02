@@ -1,14 +1,14 @@
-from splent_framework.blueprints.base_blueprint import BaseBlueprint
+from splent_framework.blueprints.base_blueprint import create_blueprint
+from splent_framework.services.service_locator import register_service
 
-profile_bp = BaseBlueprint("profile", __name__, template_folder="templates")
+from splent_io.splent_feature_profile.services import UserProfileService
+
+profile_bp = create_blueprint(__name__)
 
 
 def init_feature(app):
-    pass
+    register_service(app, "UserProfileService", UserProfileService)
 
 
 def inject_context_vars(app):
     return {}
-
-
-# hooks and signals are auto-imported by the framework (FEATURE_SUBMODULES)
