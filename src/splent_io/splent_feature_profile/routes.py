@@ -5,6 +5,7 @@ from splent_io.splent_feature_auth.decorators import login_required
 from splent_io.splent_feature_profile import profile_bp
 from splent_io.splent_feature_profile.forms import UserProfileForm
 from splent_io.splent_feature_profile.services import UserProfileService
+from splent_framework.utils.form_helpers import form_success, form_error
 
 
 @profile_bp.route("/profile/edit", methods=["GET", "POST"])
@@ -18,13 +19,8 @@ def edit_profile():
     form = UserProfileForm()
     if request.method == "POST":
         result, errors = service.update_profile(profile.id, form)
-        return service.handle_service_response(
-            result,
-            errors,
-            "profile.edit_profile",
-            "Profile updated successfully",
-            "profile/edit.html",
-            form,
-        )
+        if result:
+            return form_success("profile.edit_profile", "Profile updated successfully")
+        return form_error("profile/edit.html", form, errors)
 
     return render_template("profile/edit.html", form=form, profile=profile)
